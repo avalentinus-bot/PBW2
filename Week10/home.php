@@ -30,19 +30,21 @@
         <tr>
             <?php
             $rs = $koneksi->query("SELECT*FROM user");
-            $users = $rs->fetch();
-            print_r($users);
-            // foreach( ){
-
-            //}
+            $users = $rs->fetchALL(PDO::FETCH_ASSOC);
+            $i=1;
+            foreach($users as $user){
             ?>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <tr>
+                <td><?=$i></td>
+                <td><?=users['username']?>></td>
+                <td><?=$users></td>
+                <td><?=$i></td>
+            </tr>
+
+        <?php
+        $i++;
+            }
+        ?>
     </table>
 </body>
 </html>
