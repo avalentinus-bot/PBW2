@@ -1,14 +1,13 @@
 <?php
-    $host = 'localhost';//localhost
-    $userdb = 'root';
-    $passworddb = '';
+$servername = '127.0.0.1';
+$userdb = "root";
+$password = "";
+
 try{
-    $koneksi = new PDO("mysql:host=$host;dbname=pbw10",$userdb,
-    $passworddb);
-    $koneksi->setAttribute(PDO::ERRMODE_EXCEPTION,PDO::ATTR_ERRMODE);
-    
+    $koneksi = new PDO("mysql:host=$servername;dbname=15638_faizu", $userdb ,$password);
+    $koneksi->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch(PDOException $e)
 {
-    echo "Koneksi Gagal",$e->getMessage();
+    echo "koneksi Gagal ",$e->getMessage();
 }
