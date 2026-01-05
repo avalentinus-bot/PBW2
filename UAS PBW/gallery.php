@@ -1,6 +1,4 @@
 <?php
-// --- DATA FOTO ---
-// Masukkan lokasi/nama file fotomu di sini.
 // Kalau misal mau nambahin foto, tinggal tambah baris baru di bawahnya.
 $daftar_foto = [
     "assets/image 4.jpg",
@@ -72,4 +70,5 @@ $daftar_foto = [
 
     <script src="script.js"></script>
 </body>
+
 </html>
